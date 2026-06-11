@@ -1,12 +1,15 @@
-﻿namespace WorkTracker
+﻿using WorkTracker.Presentation.ViewModels.Base;
+
+namespace WorkTracker
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
 
-        public MainPage()
+        public MainPage(ViewModel vm)
         {
             InitializeComponent();
+            BindingContext = vm;
         }
 
         private void OnCounterClicked(object? sender, EventArgs e)

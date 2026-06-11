@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using WorkTracker.Application;
 using WorkTracker.Infrastructure;
+using WorkTracker.Presentation;
 
 namespace WorkTracker
 {
@@ -17,7 +18,8 @@ namespace WorkTracker
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
             builder.Services.AddApplication()
-                .AddInfrastructure();
+                .AddInfrastructure()
+                .AddPresentation();
 
 #if DEBUG
     		builder.Logging.AddDebug();
