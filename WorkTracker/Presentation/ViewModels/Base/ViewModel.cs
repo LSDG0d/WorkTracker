@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace WorkTracker.Presentation.ViewModels.Base
 {
-    public abstract class BaseViewModel : INotifyPropertyChanged, IDisposable
+    public abstract class ViewModel : INotifyPropertyChanged, IDisposable
     {
         public virtual Task InitAsync() => Task.CompletedTask;
 

@@ -4,14 +4,10 @@ namespace WorkTracker
 {
     public partial class App : IApplication
     {
-        public App()
+        public App(AppShell appShell)
         {
             InitializeComponent();
-        }
-
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
+            MainPage = appShell;
         }
     }
 }

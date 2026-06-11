@@ -1,4 +1,5 @@
 ﻿using WorkTracker.Presentation.ViewModels;
+using WorkTracker.Presentation.Views;
 
 namespace WorkTracker.Presentation
 {
@@ -6,8 +7,9 @@ namespace WorkTracker.Presentation
     {
         public static IServiceCollection AddPresentation(this IServiceCollection services)
         {
+            services.AddSingleton<AppShell>();
             services.AddTransient<MainViewModel>();
-            services.AddTransient<MainPage>();
+            services.AddTransient<Presentation.Views.MainPage>();
             return services;
         }
     }
